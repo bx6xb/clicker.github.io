@@ -1,0 +1,79 @@
+body
+  background: $black
+  color: $white
+  font-family: 'Quicksand', sans-serif
+
+.game-field
+  position: relative
+  width: 100%
+  min-height: 500px 
+  text-align: center
+  display: flex
+  justify-content: center
+  margin: 0 auto
+
+#background_img
+    position: absolute 
+    height: 100%
+    padding: 60px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: -1
+    filter: brightness(40%)
+    display: none
+
+#counter
+  font-size: 40px
+  padding: 20px
+
+#btn
+  width: 200px
+  height: 120px
+  font-size: 35px
+  border-radius: 40px
+  cursor: pointer
+  background: #3299a8
+  border: 1px solid $white
+
+.upgrades
+  display: flex
+  align-items: center
+  flex-flow: column
+
+#up_clicks
+  padding: 20px
+  margin: 15px
+  font-size: 25px
+  border-radius: 10px
+  cursor: pointer
+  background: #a83253
+  width: 250px
+  border: 1px solid $white
+
+#buy_all
+  width: 200px
+  margin-bottom: 10px
+  font-size: 20px
+  padding: 10px
+  background: #a83253
+  border: 1px solid $white
+
+.statics
+  font-size: 20px
+  margin-top: 20px
+  padding: 15px
+  border: 5px solid $white
+  line-height: 15px
+  &-header
+    font-size: 25px 
+    color: cyan
+    margin-bottom: 30px
+
+#reset_btn 
+  width: 200px
+  margin: 40px
+  padding: 10px
+  cursor: pointer
+  transition: .4s
+  &:hover
+    transform: rotate(90deg)

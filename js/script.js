@@ -78,6 +78,7 @@ var absolute_value_of_clicks = document.getElementById(
 );
 var upgrades_bought = document.getElementById("upgrades_bought");
 var bg_img = document.getElementById("background_img");
+var reset_btn = document.getElementById("reset_btn");
 
 var clicks = 0;
 var value = 1;
@@ -128,5 +129,12 @@ buy_all.addEventListener("click", function () {
   } else {
     buy();
     changeColor();
+  }
+});
+
+reset_btn.addEventListener("click", function () {
+  var response = confirm("Do you want to erase the progress?");
+  if (response) {
+    reset();
   }
 });
