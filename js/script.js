@@ -20,6 +20,13 @@ function increase_upgrades_bought(val = 1) {
     (parseInt(upgrades_bought.innerHTML.split(":")[1].trim()) + val);
 }
 
+function increase_cost(iter = 1) {
+  for (let i = 0; i < iter; i++) {
+    cost = Math.ceil(cost * 1.5);
+  }
+  up_clicks.innerHTML = "+1 per click<br />Cost: " + cost;
+}
+
 var counter = document.getElementById("counter");
 var btn = document.getElementById("btn");
 var up_clicks = document.getElementById("up_clicks");
@@ -50,6 +57,7 @@ up_clicks.addEventListener("click", function () {
     alert("Not enough value to buy");
   } else {
     counter.innerHTML = parseInt(counter.innerHTML) - cost;
+    increase_cost();
     increase_value_per_click();
     increase_upgrades_bought();
     changeColor();
@@ -64,6 +72,7 @@ buy_all.addEventListener("click", function () {
     let bought = Math.floor(counter.innerHTML / cost);
     counter.innerHTML -= bought * cost;
     value += bought;
+    increase_cost(bought);
     increase_value_per_click(bought);
     increase_upgrades_bought(bought);
     changeColor();
