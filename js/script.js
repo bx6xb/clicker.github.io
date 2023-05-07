@@ -21,13 +21,11 @@ function increase_cost(iter = 1) {
 }
 
 function check_record() {
-  if (parseInt(counter.innerHTML) >= 10 ** 6) {
-    if (win === 0) {
-      alert("Congratulations! You won the game!");
-      alert("Screen your record and send it to developer!");
-      bg_img.style.display = "block";
-      win++;
-    }
+  if (parseInt(counter.innerHTML) >= 10 ** 6 && win === 0) {
+    alert("Congratulations! You won the game!");
+    alert("Screen your record and send it to developer!");
+    bg_img.style.display = "block";
+    win++;
   }
 }
 
