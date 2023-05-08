@@ -79,6 +79,9 @@ var absolute_value_of_clicks = document.getElementById(
 var upgrades_bought = document.getElementById("upgrades_bought");
 var bg_img = document.getElementById("background_img");
 var reset_btn = document.getElementById("reset_btn");
+var dark = document.getElementById("theme-dark");
+var bright = document.getElementById("theme-bright");
+var statics = document.getElementById("statics");
 
 var clicks = 0;
 var value = 1;
@@ -137,4 +140,24 @@ reset_btn.addEventListener("click", function () {
   if (response) {
     reset();
   }
+});
+
+bright.addEventListener("click", function () {
+  document.body.style.background = "white";
+  document.body.style.color = "black";
+  btn.style.border = "2px solid black";
+  up_clicks.style.border = "2px solid black";
+  buy_all.style.border = "2px solid black";
+  statics.style.border = "7px solid black";
+  reset_btn.src = "../img/reset black.png";
+});
+
+dark.addEventListener("click", function () {
+  document.body.style.background = "black";
+  document.body.style.color = "white";
+  btn.style.border = "2px solid white";
+  up_clicks.style.border = "2px solid white";
+  buy_all.style.border = "2px solid white";
+  statics.style.border = "7px solid white";
+  reset_btn.src = "../img/reset white.png";
 });

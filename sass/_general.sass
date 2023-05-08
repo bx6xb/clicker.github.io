@@ -2,6 +2,7 @@ body
   background: $black
   color: $white
   font-family: 'Quicksand', sans-serif
+  transition: 1s
 
 .game-field
   position: relative
@@ -33,9 +34,9 @@ body
   border-radius: 40px
   cursor: pointer
   background: #3299a8
-  border: 1px solid $white
+  border: 2px solid $white
 
-.upgrades
+#upgrades
   display: flex
   align-items: center
   flex-flow: column
@@ -48,7 +49,7 @@ body
   cursor: pointer
   background: #a83253
   width: 250px
-  border: 1px solid $white
+  border: 2px solid $white
 
 #buy_all
   width: 200px
@@ -56,13 +57,13 @@ body
   font-size: 20px
   padding: 10px
   background: #a83253
-  border: 1px solid $white
+  border: 2px solid $white
 
-.statics
+#statics
   font-size: 20px
   margin-top: 20px
   padding: 15px
-  border: 5px solid $white
+  border: 7px solid $white
   line-height: 15px
   &-header
     font-size: 25px 
@@ -77,3 +78,24 @@ body
   transition: .4s
   &:hover
     transform: rotate(90deg)
+
+#theme
+  display: flex
+  justify-content: space-around
+  font-size: 30px
+  height: 50px
+  margin-bottom: 50px
+  &-bright 
+    cursor: pointer 
+    positoin: relative
+    &::after 
+      content: ''
+      width: 1px 
+      height: 50px
+      background-color: #fff
+      margin-left: 33px
+      display: inline-block
+      position: absolute
+  &-dark 
+    cursor: pointer 
+    
